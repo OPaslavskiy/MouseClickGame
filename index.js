@@ -6,7 +6,7 @@ console.log(clickMeDiv);
 clickMeDiv.addEventListener("click", clickMe);
 
 let clicksNumber = 0;
-let timer = 4;
+let timer = 60;
 
 function clickMe() {
   clicksNumber += 1;
@@ -26,7 +26,7 @@ function setTimer() {
         clearInterval(idInterval);
         clickMeDiv.removeEventListener("click", clickMe);
       }
-      clock.textContent = timer;
+      clock.textContent = `Remains ${timer} seconds`;
       console.log(idInterval);
       return idInterval;
     }, 1000);
